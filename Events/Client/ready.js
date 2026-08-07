@@ -11,7 +11,7 @@ module.exports = {
     // ActivityType: Playing = 0, Streaming = 1, Listening = 2, Watching = 3, Custom = 4, Competing = 5
     // status: online = green, idle = yellow, dnd = red, invisible = gray
 
-    const estados = [
+    const states = [
       { name: "Minecraft", type: ActivityType.Playing, status: "dnd" },
       { name: "Terraria", type: ActivityType.Playing, status: "dnd" },
       {
@@ -38,7 +38,7 @@ module.exports = {
     let i = 0;
 
     setInterval(() => {
-      const actual = estados[i];
+      const actual = states[i];
 
       client.user.setPresence({
         activities: [
@@ -50,7 +50,7 @@ module.exports = {
         ],
         status: actual.status,
       });
-      i = (i + 1) % estados.length;
+      i = (i + 1) % states.length;
     }, 5000); // (5000ms = 5 seconds)
   },
 };
