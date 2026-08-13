@@ -4,9 +4,12 @@ module.exports = {
   name: "clientReady",
   once: true,
   async execute(client) {
-    console.info(`✅ Bot is online as ${client.user.tag}!`);
+    await require("../../handlers/slashHandler").loadSlash(client); // goes up 2 folders to reach the root "handlers" folder
 
-    await require("../../handlers/slashHandler").loadSlash(client);
+    await require("./moonlinkSetup")(client); // same folder as this file (e.g. Events/Client/)
+    require("./playerStart")(client); // same folder as this file (e.g. Events/Client/)
+
+    console.info(`✅ Bot is online as ${client.user.tag}!`);
 
     // ActivityType: Playing = 0, Streaming = 1, Listening = 2, Watching = 3, Custom = 4, Competing = 5
     // status: online = green, idle = yellow, dnd = red, invisible = gray

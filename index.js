@@ -6,6 +6,7 @@ require("dotenv").config({ quiet: true });
 const client = new Client({ intents: 53608447 }); // raw intents bitfield (from video #3)
 
 client.slashCommands = new Collection(); // stores all slash commands
+client.interactions = new Collection(); // stores active interaction sessions (e.g. buttons, menus)
 
 require("./handlers/eventHandler").loadEvents(client); // loads all event files
 

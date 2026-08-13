@@ -11,7 +11,8 @@
   "dependencies": {
     "canvas": "^3.2.3",
     "discord.js": "^14.27.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "moonlink.js": "^5.2.0"
   },
   "allowScripts": {
     "canvas@3.2.3": true
