@@ -1,0 +1,17 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Check syntax of all JS files
+        run: find . -name "*.js" -not -path "./node_modules/*" -exec node --check {} \;
