@@ -1,10 +1,10 @@
-const { EmbedBuilder, AuditLogEvent } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 const { getData } = require("../Client/dbManager");
 
 module.exports = {
   name: "messageBulkDelete",
   once: false,
-  async execute(messages, client) {
+  async execute(messages) {
     const guild = messages.first()?.guild;
     if (!guild) return;
 

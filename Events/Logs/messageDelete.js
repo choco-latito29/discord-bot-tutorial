@@ -4,7 +4,7 @@ const { getData } = require("../Client/dbManager");
 module.exports = {
   name: "messageDelete",
   once: false,
-  async execute(message, client) {
+  async execute(message) {
     if (!message.guild) return; // ignore DMs
 
     if (message.partial) await message.fetch().catch(() => null); // fetch full data if it's a partial message

@@ -4,7 +4,7 @@ const { getData } = require("../Client/dbManager");
 module.exports = {
   name: "channelCreate",
   once: false,
-  async execute(channel, client) {
+  async execute(channel) {
     if (!channel.guild) return; // ignore DM channels
 
     const config = getData("logs", channel.guild.id);

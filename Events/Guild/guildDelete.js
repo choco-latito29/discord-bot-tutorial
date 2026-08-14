@@ -9,7 +9,7 @@ module.exports = {
       const owner = await guild.fetchOwner(); // may fail if the bot no longer has access to the guild
 
       ownerTag = owner.user.tag;
-    } catch (error) {}
+    } catch {}
 
     const embed = new EmbedBuilder()
       .setTitle("📤 Removed from a server")

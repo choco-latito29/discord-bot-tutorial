@@ -1,4 +1,4 @@
-const { Client, ActivityType, Collection } = require("discord.js");
+const { Client, Collection } = require("discord.js");
 require("dotenv").config({ quiet: true });
 // const config = require("./config.json");
 // const { token } = require("./config");

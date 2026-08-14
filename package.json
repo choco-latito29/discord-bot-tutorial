@@ -16,5 +16,9 @@
   },
   "allowScripts": {
     "canvas@3.2.3": true
+  },
+  "devDependencies": {
+    "eslint": "^10.8.1",
+    "globals": "^17.11.0"
   }
 }

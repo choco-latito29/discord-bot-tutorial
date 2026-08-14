@@ -4,7 +4,7 @@ const { getData } = require("../Client/dbManager");
 module.exports = {
   name: "channelUpdate",
   once: false,
-  async execute(oldChannel, newChannel, client) {
+  async execute(oldChannel, newChannel) {
     if (!oldChannel.guild) return; // ignore DM channels
 
     const config = getData("logs", oldChannel.guild.id);

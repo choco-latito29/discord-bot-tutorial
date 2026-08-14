@@ -1,10 +1,10 @@
-const { EmbedBuilder, AuditLogEvent } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 const { getData } = require("../Client/dbManager");
 
 module.exports = {
   name: "messageUpdate",
   once: false,
-  async execute(oldMessage, newMessage, client) {
+  async execute(oldMessage, newMessage) {
     if (!newMessage.guild) return; // ignore DMs
 
     if (newMessage.partial) await newMessage.fetch().catch(() => null); // fetch full data if it's a partial message
