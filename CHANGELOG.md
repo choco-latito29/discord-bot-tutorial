@@ -14,7 +14,7 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
-- Music system: Lavalink connection setup via `moonlink.js`, node event logging, track start/queue end handlers, and the `/play` command.
+- Music system: Lavalink connection setup via `moonlink.js`, node event logging, track start/queue end handlers, and the `/play`, `/pause`, and `/continue` commands.
 
 ### Added
 
