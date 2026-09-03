@@ -5,8 +5,8 @@ const {
 } = require("discord.js");
 const { getData, setData } = require("../../Events/Client/dbManager");
 const GLOBAL_KEY = "GLOBAL"; // single shared key, blacklist isn't per-guild
-const OWNER_ID = "USER_OWNER_ID"; // Owener id permission
-const ID_CHANEL_LOGS = "CHANNEL_REPORT_ID"; // Channel id logs information
+const OWNER_ID = process.env.OWNER_ID; // Owner id permission
+const ID_CHANEL_LOGS = process.env.LOGS_CHANNEL_ID; // Channel id logs information
 
 const DURATIONS = {
   "1min": { label: "1 Minute (test)", ms: 1000 * 60 },

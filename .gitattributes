@@ -1,0 +1,15 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# JS/JSON always LF, never CRLF
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Lockfile: mark as generated so GitHub collapses it in diffs/PRs
+package-lock.json linguist-generated=true
+
+# Don't count JSON "databases" as source in GitHub's language stats
+database/*.json linguist-generated=true

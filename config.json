@@ -1,4 +1,6 @@
 {
   "token": "PUT_YOUR_BOT_TOKEN_HERE",
+  "ownerId": "PUT_YOUR_DISCORD_USER_ID_HERE",
+  "logsChannelId": "PUT_YOUR_LOGS_CHANNEL_ID_HERE",
   "key": ""
 }

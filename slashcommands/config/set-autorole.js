@@ -49,7 +49,7 @@ module.exports = {
     const botMember = guild.members.me;
     const userMember = interaction.member;
 
-    let data = getData("autorole", guild.id) || {
+    const data = getData("autorole", guild.id) || {
       users: [], // default structure if no config exists yet for this guild
       bots: [],
     };

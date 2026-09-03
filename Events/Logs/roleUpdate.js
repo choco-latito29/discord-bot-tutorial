@@ -42,7 +42,7 @@ module.exports = {
         ? logEntry.executor
         : "A stranger";
 
-    let fields = [];
+    const fields = [];
 
     if (oldRole.name !== newRole.name) {
       fields.push({

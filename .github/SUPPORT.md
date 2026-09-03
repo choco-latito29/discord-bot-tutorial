@@ -1,7 +1,7 @@
-# Support
+# Security Policy
 
-If you need help using this bot or have questions, join the support server:
+If you discover a security vulnerability, please report it privately instead of opening a public issue.
 
-💬 **Discord:** https://discord.gg/smp7hwrXr4
+📧 Contact: choco@worddevs.dev
 
-For bugs or feature requests, please [open an issue](../../issues/new/choose).
+Do not disclose vulnerabilities publicly until they have been addressed.

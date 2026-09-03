@@ -2,33 +2,36 @@
 
 All notable changes to this project are documented in this file.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+
 ## [Unreleased]
-
-### Chore
-
-- Added ESLint flat config (`eslint.config.js`) and fixed all lint warnings across the codebase.
-
-### Chore
-
-- Added `.github` community health files (issue templates, funding, security policy, support) and CI workflows (`lint.yml`, `validate.yml`).
 
 ### Added
 
 - Music system: Lavalink connection setup via `moonlink.js`, node event logging, track start/queue end handlers, and the `/play`, `/pause`, and `/continue` commands.
-
-### Added
-
 - Blacklist system: `/blacklist add`, `/blacklist remove`, and `/blacklist list` subcommands, with automatic expiration handling in `interactionCreate`.
-
-### Added
-
-- Guild join/leave logging (`guildCreate`, `guildDelete`) and an owner-only `/leave` command to make the bot leave a server by ID.
+- Guild join/leave logging (`guildCreate`, `guildDelete`) and an owner-only `/exit` command to make the bot leave a server by ID.
+- `.github` community health files (issue templates, funding, security policy, support) and CI workflows (`lint.yml`, `validate.yml`).
+- `README.md` with setup instructions, feature list, and badges.
+- `.env.example`, `.gitattributes`, `.editorconfig`, and `.nvmrc` for consistent local setup across contributors.
 
 ### Changed
 
 - Renamed the `estados` array to `states` in `ready.js` for full English consistency across the codebase.
+- Renamed `/leave` command to `/exit`.
+- `OWNER_ID` and `LOGS_CHANNEL_ID` in `blacklist.js` and `exit.js` now read from environment variables instead of hardcoded placeholder strings.
 
-## [0.1.0] - Initial Commit
+### Fixed
+
+- `/blacklist` and `/exit` were unusable by anyone, including the bot owner, because the owner check compared against a literal placeholder string (`"USER_OWNER_ID"` / `"USER_ID"`) that was never replaced.
+
+### Chore
+
+- Added ESLint flat config (`eslint.config.js`) and fixed all lint warnings across the codebase.
+- Updated `.github/SECURITY.md` contact email to `choco@worddevs.dev`.
+- Scoped `.github/FUNDING.yml` to the personal account only.
+
+## [0.1.0] - 2026-08-06
 
 ### Added
 

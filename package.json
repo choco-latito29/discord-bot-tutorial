@@ -1,13 +1,42 @@
 {
-  "name": "elaldas",
+  "name": "discord-bot-tutorial",
   "version": "1.0.0",
-  "description": "",
+  "description": "🤖 A modular Discord bot built with Discord.js v14 and Node.js. Includes slash commands, a guild event logging system, and automated role assignment.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "discord-js",
+    "discordjs-v14",
+    "bot",
+    "slash-commands",
+    "automation",
+    "backend",
+    "nodejs",
+    "javascript",
+    "es6",
+    "template",
+    "tutorial",
+    "moonlink",
+    "lavalink"
+  ],
   "type": "commonjs",
+  "author": "choco-latito29",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choco-latito29/discord-bot-tutorial.git"
+  },
+  "homepage": "https://github.com/choco-latito29/discord-bot-tutorial#readme",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "private": true,
   "dependencies": {
     "canvas": "^3.2.3",
     "discord.js": "^14.27.0",
@@ -18,7 +47,8 @@
     "canvas@3.2.3": true
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "eslint": "^10.9.1",
-    "globals": "^17.11.0"
+    "globals": "^17.12.0"
   }
 }

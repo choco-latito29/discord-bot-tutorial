@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("leave")
+    .setName("exit")
     .setDescription("Make the bot leave a server.")
     .addStringOption((option) =>
       option.setName("id").setDescription("Server ID.").setRequired(true),
@@ -10,7 +10,7 @@ module.exports = {
   async execute(interaction, client) {
     const id = interaction.options.getString("id"); // fixed: was "ids", singular value
 
-    if (interaction.user.id !== "USER_ID") {
+    if (interaction.user.id !== process.env.OWNER_ID) {
       return interaction.reply({
         content: `❌ You can't use this command.`, // owner-only command
         flags: 64, // ephemeral: only visible to the user who ran it
