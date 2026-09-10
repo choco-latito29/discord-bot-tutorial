@@ -8,8 +8,5 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 
-# Lockfile: mark as generated so GitHub collapses it in diffs/PRs
-package-lock.json linguist-generated=true
-
 # Don't count JSON "databases" as source in GitHub's language stats
 database/*.json linguist-generated=true
