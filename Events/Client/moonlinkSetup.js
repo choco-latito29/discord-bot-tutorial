@@ -5,10 +5,10 @@ module.exports = (client) => {
 
   const nodes = [
     {
-      identifier: "𝐖𝐨𝐫𝐝 𝐃𝐞𝐯𝐬 ✨", // Identifierd for console the lavalink
-      host: "lavalink-v4.triniumhost.com", // HostName to lavalink connect
+      identifier: "LAVALINK FREE SERVICE", // Identifierd for console the lavalink
+      host: "lavalinkv4.serenetia.com", // HostName to lavalink connect
       port: 443, // Port connect server Lavalink
-      password: "free", // ⚠️ Lavalink password connect sencibility secret
+      password: "https://seretia.link/discord", // ⚠️ Lavalink password connect sencibility secret
       secure: true, // true = use wss:// (required for port 443)
       retryAmount: 10, // how many times to retry connecting before giving up
       retryDelay: 5000, // ms between reconnect attempts
